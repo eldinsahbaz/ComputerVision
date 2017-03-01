@@ -19,8 +19,3 @@ To run the filtering process:
     First filtered image: Mean filtering
     Second filtered image: Gaussian filtering
     Third filtered image: Median filtering
-
-SideNote:
-  I completed this assignment in MATLAB 2014a. There may be some differences
-  in function names between my version and your version (if you are using a
-  different version).
