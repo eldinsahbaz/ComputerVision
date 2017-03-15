@@ -3,7 +3,7 @@ README.txt
 
 To run the filtering process:
 
-1) Rename the file EldinSahbaz_EdgeDetector.m to EdgeDetector.m then open the m file in MATLAB
+1) Open the m file in MATLAB
 
 2) Pass the "Corners" function the appropriate arguments:
     EdgeDetector(img, m, mu, sigma, tl, th)
