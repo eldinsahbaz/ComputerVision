@@ -241,21 +241,21 @@ end
 
 function [dist] = colordist(xt, vm)
     %take the square root of the values we get from subtracting the squared
-    %dot product of the current RBG vector from the codeword’s RCB vector
-    %divided by the magnitude of the codeword’s RGB vector from the squared
-    %magnitude of the pixel’s RGB vector
+    %dot product of the current RBG vector from the codewordÂ’s RCB vector
+    %divided by the magnitude of the codewordÂ’s RGB vector from the squared
+    %magnitude of the pixelÂ’s RGB vector
     dist = sqrt((sqrt(sum(xt.^2))^2) - ((dot(xt,vm)^2)/(sqrt(sum(vm.^2))^2)));
 end
 
 function [isBetween] = brightness(I, IMin, IMax, alpha, beta)
-    %the current pixel’s RGB vector sum is in the range of low and high
+    %the current pixelÂ’s RGB vector sum is in the range of low and high
     %brightness values. The low brightness values is computed by
-    %multiplying the codeword’s maximum brightness by some factor alpha. We
-    %choose the value of alpha, but it’s typically between 0.4 and 0.7
+    %multiplying the codewordÂ’s maximum brightness by some factor alpha. We
+    %choose the value of alpha, but itÂ’s typically between 0.4 and 0.7
     %(but always less than 1). Likewise, the high brightness is computed by
     %choosing the minimum values of either beta multiplied by the
-    %codeword’s maximum brightness value (where beta is greater than 1) or
-    %the codeword’s minimum brightness is divided by alpha. If the pixel’s
+    %codewordÂ’s maximum brightness value (where beta is greater than 1) or
+    %the codewordÂ’s minimum brightness is divided by alpha. If the pixelÂ’s
     %brightness falls into this range then we return true, otherwise false.
     
     Ilow = alpha*IMax;
